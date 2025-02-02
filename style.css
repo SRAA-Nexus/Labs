@@ -1,4 +1,4 @@
-/* General Styles */
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #121212;
+  background-color: #1a1a1a;
   color: #fff;
 }
 
@@ -23,8 +23,11 @@ body {
 }
 
 .hero h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
+  font-size: 4em;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .hero p {
@@ -33,24 +36,24 @@ body {
 }
 
 .cta-btn {
-  padding: 15px 30px;
+  padding: 15px 40px;
   background-color: #00bcd4;
   color: white;
-  border-radius: 5px;
   font-size: 1.2em;
+  border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
 .cta-btn:hover {
-  background-color: #0097a7;
+  background-color: #007e8a;
 }
 
 /* About Section */
 .about {
   padding: 50px 20px;
   text-align: center;
-  background-color: #1c1c1c;
+  background-color: #222;
 }
 
 .about h2 {
@@ -58,15 +61,22 @@ body {
   margin-bottom: 20px;
 }
 
+.about p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
 .about-gallery {
   display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
+  justify-content: center;
+  gap: 20px;
 }
 
 .about-gallery img {
-  width: 45%;
-  border-radius: 10px;
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 /* Projects Section */
@@ -83,58 +93,51 @@ body {
 
 .projects-container {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
 .project-card {
+  width: 300px;
   background-color: #444;
-  width: 30%;
   padding: 20px;
   border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .project-card img {
   width: 100%;
-  border-radius: 8px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 .project-card h3 {
-  font-size: 1.8em;
-  margin: 20px 0;
+  font-size: 1.5em;
+  margin-top: 15px;
 }
 
 .project-card p {
-  font-size: 1.1em;
+  font-size: 1em;
+  margin-bottom: 15px;
 }
 
 .project-card a {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: #00bcd4;
-  color: #fff;
-  border-radius: 5px;
   font-size: 1.1em;
+  color: #00bcd4;
   text-decoration: none;
-  transition: background-color 0.3s ease;
 }
 
 .project-card a:hover {
-  background-color: #0097a7;
+  color: #007e8a;
 }
 
-/* Collaboration Section */
+/* Collaborate Section */
 .collaborate {
-  background-color: #1c1c1c;
   padding: 50px 20px;
   text-align: center;
+  background-color: #222;
 }
 
 .collaborate h2 {
@@ -143,59 +146,63 @@ body {
 }
 
 .collaborate p {
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin-bottom: 30px;
 }
 
 .collaborate .cta-btn {
-  font-size: 1.3em;
-  padding: 15px 30px;
+  padding: 15px 40px;
   background-color: #00bcd4;
   color: white;
-  text-decoration: none;
+  font-size: 1.2em;
   border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.collaborate .cta-btn:hover {
+  background-color: #007e8a;
 }
 
 /* Footer Section */
 footer {
+  background-color: #111;
   padding: 20px;
-  background-color: #333;
   text-align: center;
 }
 
-footer .social-icons {
-  margin-top: 20px;
+footer p {
+  font-size: 1em;
+  margin-bottom: 10px;
 }
 
 footer .social-icons a {
-  margin: 0 10px;
-  font-size: 1.5em;
   color: #fff;
+  font-size: 1.5em;
+  margin: 0 15px;
+  text-decoration: none;
 }
 
 footer .social-icons a:hover {
   color: #00bcd4;
 }
 
-/* Mobile Styles */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
-  .projects-container {
-    flex-direction: column;
-    align-items: center;
+  .hero h1 {
+    font-size: 2.5em;
   }
 
-  .project-card {
-    width: 80%;
-    margin-bottom: 20px;
+  .cta-btn {
+    padding: 12px 25px;
   }
 
   .about-gallery {
     flex-direction: column;
-    align-items: center;
   }
 
-  .about-gallery img {
-    width: 80%;
-    margin-bottom: 20px;
+  .projects-container {
+    flex-direction: column;
+    gap: 20px;
   }
 }
