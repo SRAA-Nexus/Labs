@@ -1,4 +1,4 @@
-// Simple Scroll Animation
+// Smooth Scroll to Projects Section
 document.addEventListener('DOMContentLoaded', () => {
   const btn = document.querySelector('.btn');
   const projectsSection = document.querySelector('#projects');
