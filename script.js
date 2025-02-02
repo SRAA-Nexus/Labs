@@ -1,15 +1,26 @@
-// Scroll Animations using GSAP
-document.addEventListener('DOMContentLoaded', () => {
-  gsap.from('.hero h1', { opacity: 0, y: -50, duration: 1 });
-  gsap.from('.hero p', { opacity: 0, y: 50, duration: 1, delay: 0.5 });
-  gsap.from('.cta-btn', { opacity: 0, y: 50, duration: 1, delay: 1 });
-
-  gsap.from('.about h2', { opacity: 0, y: 50, duration: 1, delay: 1.5 });
-  gsap.from('.about-gallery img', { opacity: 0, y: 50, duration: 1, stagger: 0.3 });
-
-  gsap.from('.projects h2', { opacity: 0, y: 50, duration: 1, delay: 2 });
-  gsap.from('.project-card', { opacity: 0, y: 50, duration: 1, stagger: 0.3 });
-
-  gsap.from('.collaborate h2', { opacity: 0, y: 50, duration: 1, delay: 2.5 });
-  gsap.from('.collaborate .cta-btn', { opacity: 0, y: 50, duration: 1, delay: 3 });
+// GSAP Animation Example
+gsap.from(".hero h1", {
+  duration: 2,
+  opacity: 0,
+  y: -50,
+  ease: "bounce",
 });
+
+gsap.from(".cta-btn", {
+  duration: 2,
+  opacity: 0,
+  scale: 0.8,
+  delay: 1,
+  ease: "power1.out",
+});
+
+// Scroll Magic for Scroll Animations
+var controller = new ScrollMagic.Controller();
+
+new ScrollMagic.Scene({
+  triggerElement: ".projects",
+  duration: 400,
+  triggerHook: 0.7
+})
+.setClassToggle(".projects", "active")
+.addTo(controller);
